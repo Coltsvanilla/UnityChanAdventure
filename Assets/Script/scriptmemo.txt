@@ -1,0 +1,36 @@
+シーン切り替え方法
+下準備
+using UnityEngine.SceneManagement;
+
+■通常の遷移
+・シーン名を利用する
+SceneManager.LoadScene("main");
+・sceneBuildIndexを利用する
+SceneManager.LoadScene(1);
+※sceneBuildIndex: bulid Settingsでシーンを登録した時に右側に出てくる数字
+
+■非同期の遷移
+・シーン名を利用する
+SceneManager.LoadSceneAsync("main");
+・sceneBuildIndexを利用する
+SceneManager.LoadSceneAsync(1);
+
+■シーンの加算
+シーンの加算: 今現在いるシーンに追加する形で指定したシーンをロードする
+・シーン名を利用する
+SceneManager.LoadScene("main", LoadSceneMode.Additive);
+・sceneBuildIdを利用する
+SceneManager.LoadScene(1, LoadSceneMode.Additive);
+
+■非同期でのシーンの加算
+・シーン名を利用する
+SceneManager.LoadSceneAsync("main", LoadSceneMode.Additive);
+・sceneBuildIdを利用する
+SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+
+■シーンの削除
+シーンの削除: すでにロードしたシーンをアンロードする
+・シーン名を利用する
+SceneManager.UnloadScene("main");
+・sceneBuildIdを利用する
+SceneManager.UnloadScene(1);
