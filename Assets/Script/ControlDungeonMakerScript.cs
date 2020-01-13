@@ -87,7 +87,7 @@ public class ControlDungeonMakerScript : MonoBehaviour
         for (int i = 0; i < (DungeonSize / 2)*
             (DungeonSize / 2); i++)
         {
-            while(true)
+            while (true)
             {
                 int x = rnd.Next(1, DungeonSize) * 4;
                 int y = rnd.Next(1, DungeonSize) * 4;
@@ -136,7 +136,7 @@ public class ControlDungeonMakerScript : MonoBehaviour
         {
             for (int j = 0; j < wall; j++)
             {
-                if(data[i,j])
+                if (data[i,j])
                 {
                     GameObject obj = GameObject.
                         CreatePrimitive(PrimitiveType.Cube);

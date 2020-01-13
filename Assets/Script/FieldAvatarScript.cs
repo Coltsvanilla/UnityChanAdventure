@@ -25,7 +25,7 @@ public class FieldAvatarScript : MonoBehaviour
         transform.localPosition += vector * Time.fixedDeltaTime;
         transform.Rotate(0, h, 0);
 
-        if(Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             animator.SetFloat("Speed", v * 1.5f);
         }
