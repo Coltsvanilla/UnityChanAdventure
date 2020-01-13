@@ -5,11 +5,10 @@
 //
 using UnityEngine;
 using System.Collections;
-using System.Security.Policy;
 
 namespace UnityChan
 {
-	public class AutoBlink : MonoBehaviour
+    public class AutoBlink : MonoBehaviour
 	{
 
 		public bool isActive = true;				//オート目パチ有効
@@ -24,7 +23,7 @@ namespace UnityChan
 		private bool isBlink = false;				//目パチ管理用
 
 		public float timeBlink = 0.4f;				//目パチの時間
-		private float timeRemining = 0.0f;			//タイマー残り時間
+		public float timeRemining = 0.0f;			//タイマー残り時間
 
 		public float threshold = 0.3f;				// ランダム判定の閾値
 		public float interval = 3.0f;				// ランダム判定のインターバル

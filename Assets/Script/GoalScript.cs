@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GoalScript : MonoBehaviour
 {
@@ -14,7 +14,18 @@ public class GoalScript : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        SceneManager.LoadScene("Start");
-        Debug.Log("ゴール");
+        GameObject CD = GameObject.Find("ControlDungeonMaker");
+        ControlDungeonMakerScript cdms = CD.GetComponent<ControlDungeonMakerScript>();
+        if (cdms.DungeonSize < 8)
+        {
+            cdms.DungeonSize++;
+            cdms.OnReSet();
+        }
+        else
+        {
+            Debug.Log("ゴール");
+            cdms.GoalEnd();
+        }
+        
     }
 }
